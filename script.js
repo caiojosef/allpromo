@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const VISIBLE = 3;
-  document.querySelectorAll('.brands-carousel, .products-carousel')
+  document.querySelectorAll('.brands-carousel, .products-carousel, .brands-working-carousel')
     .forEach(initCarousel);
 
   function initCarousel(carousel) {
@@ -76,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
     track.addEventListener('transitionend', () => {
       busy = false;
       track.style.transition = 'none';
-      // loop contínuo
       if (current >= count + VISIBLE) current = VISIBLE;
       else if (current < VISIBLE) current = count + VISIBLE - 1;
       update();
@@ -95,11 +94,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Variação do texto do botão principal para evitar repetição
   const textosCTA = [
-    'Entrar no Grupo VIP!',
-    'Participar do Grupo VIP!',
-    'Quero ser VIP!'
+    "CLIQUE AQUI E ENTRE NO GRUPO VIP",
+    "Clique agora e faça parte do nosso grupo VIP!",
+    "Não perca! Entre para o grupo VIP agora!",
+    "Garanta sua vaga: entre no grupo VIP!",
+    "Clique e junte-se ao nosso grupo VIP exclusivo!",
+    "Venha para o grupo VIP e receba ofertas incríveis!",
+    "Seu convite VIP está aqui — clique e entre!"
   ];
-  document.querySelectorAll('.btn-join').forEach(btn => {
-    btn.textContent = textosCTA[Math.floor(Math.random() * textosCTA.length)];
+  document.querySelectorAll('.btn-join').forEach((btn, index) => {
+    if (index === 0) {
+      btn.textContent = textosCTA[0];
+    } else {
+      btn.textContent = textosCTA[Math.floor(Math.random() * textosCTA.length)];
+    }
   });
 });
