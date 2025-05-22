@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createBtn(dir, cb) {
       const btn = document.createElement('button');
-      btn.className = `carousel-btn ${dir}`;
-      btn.innerHTML = dir === 'prev' ? '&#10094;' : '&#10095;';
       btn.addEventListener('click', () => { cb(); reset(); });
       return btn;
     }
