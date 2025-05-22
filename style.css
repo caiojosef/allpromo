@@ -78,7 +78,7 @@ body {
 
 /* CTA principal */
 .btn-join {
-  background: linear-gradient(45deg, #ff0080, #ff8c00);
+  background-color: #25D366; /* verde WhatsApp */
   color: #fff;
   font-weight: 800;
   font-size: 1.6rem;
@@ -87,8 +87,8 @@ body {
   border-radius: 50px;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.6), 0 0 20px rgba(255, 140, 0, 0.6);
-  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+  transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 50px;
   display: inline-block;
   cursor: pointer;
@@ -96,8 +96,10 @@ body {
 
 .btn-join:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(255, 0, 128, 0.8), 0 0 30px rgba(255, 140, 0, 0.8);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.9);
 }
+
+
 
 /* gatilhos e membros */
 .triggers {
@@ -170,20 +172,35 @@ footer {
 
 /* Botão dentro da seção branca */
 .white-section .btn-join {
-  background: #00ffee;
-  color: #1a1a1a;
-  padding: 16px 48px;
+  background-color: #25D366; /* verde WhatsApp */
+  color: #fff;
+  padding: 16px 48px 16px 50px; /* espaço extra à esquerda para o ícone */
   border-radius: 40px;
   font-size: 1.4rem;
   font-weight: 700;
-  box-shadow: 0 0 20px rgba(0, 238, 238, 0.5);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
   margin-top: 30px;
-  transition: transform .3s, box-shadow .3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+/* Ícone dentro do botão */
+.white-section .btn-join svg {
+  position: absolute;
+  left: 15px;
+  width: 24px;
+  height: 24px;
+  fill: white;
+  pointer-events: none;
 }
 
 .white-section .btn-join:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 238, 238, 0.8);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.8);
 }
 
 /* carousel wrapper */
